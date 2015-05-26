@@ -1,0 +1,28 @@
+{
+  disallowCommaBeforeLineBreak: true,
+  disallowSemicolons: true,
+  requireSpaceAfterKeywords: [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "switch",
+    "case",
+    "return",
+    "try",
+    "catch",
+    "typeof",
+    "void"
+  ],
+  disallowNewlineBeforeBlockStatements: true,
+  disallowOperatorBeforeLineBreak: [
+    "+",
+    "."
+  ],
+  disallowSpaceAfterObjectKeys: true,
+  disallowSpaceBeforePostfixUnaryOperators: [
+    "++",
+    "--"
+  ]
+}

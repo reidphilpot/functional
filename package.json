@@ -1,0 +1,22 @@
+{
+  "name": "@reidphilpot/functional",
+  "version": "0.0.0",
+  "description": "Useful functional utils",
+  "scripts": {
+    "test": "mocha -R spec test",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reidphilpot/functional.git"
+  },
+  "author": "Reid Philpot",
+  "license": "ISC",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.5"
+  }
+}
