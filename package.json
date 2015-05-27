@@ -1,6 +1,6 @@
 {
   "name": "@reidphilpot/functional",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Useful functional utils",
   "scripts": {
     "test": "mocha -R spec test",
