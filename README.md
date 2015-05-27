@@ -46,7 +46,7 @@ Returns a function that will itself return the `key` property of any passed-in o
     property('name')(stooge)
       //=> "moe"
 
-Will also check for nested objects:
+Also handles nested objects:
 
     var stooge = {name: 'moe', address: { street: 'Broadway'}}
     property('address.street')(stooge)
