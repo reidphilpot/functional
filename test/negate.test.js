@@ -15,4 +15,10 @@ describe('negate', function () {
     expect(test()).to.be.false
   })
 
+  it('should filter falsy values', function () {
+    var isFalsy = negate(Boolean)
+    
+    expect([-2, -1, 0, 1, 2].filter(isFalsy)).to.have.members([0])
+  })
+
 })
