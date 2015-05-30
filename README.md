@@ -32,7 +32,7 @@ Returns a new negated version of the predicate function.
 
 ## Partial
 
-Partially apply a function by filling in any number of its arguments, without changing its dynamic this value.
+Partially apply a function by filling in any number of its arguments, without changing its dynamic `this` value.
 
     var subtract = function(a, b) { return b - a; }
     sub5 = partial(subtract, 5)
