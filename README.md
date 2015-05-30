@@ -30,6 +30,15 @@ Returns a new negated version of the predicate function.
     [-2, -1, 0, 1, 2].filter(isFalsy)
       //=> [0]
 
+## Partial
+
+Partially apply a function by filling in any number of its arguments, without changing its dynamic this value.
+
+    var subtract = function(a, b) { return b - a; }
+    sub5 = partial(subtract, 5)
+    sub5(20)
+      //=> 15
+
 ## Pluck
 
 A convenient version of what is perhaps the most common use-case for `map`: extracting a list of property values.
