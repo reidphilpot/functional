@@ -1,5 +1,7 @@
 # @reidphilpot/functional
 
+[![Build Status](https://travis-ci.org/reidphilpot/functional.svg?branch=master)](https://travis-ci.org/reidphilpot/functional)
+
 ## Functor
 
 If the specified value is a function, returns the specified value. Otherwise, returns a function that returns the specified value
@@ -65,9 +67,9 @@ Also handles nested objects:
 
 A function that wraps around `map` and turns any other function into a mapping.
 
-    var squareMap = splat(function (n) { 
-      return n*n 
+    var squareMap = splat(function (n) {
+      return n*n
     });
-    
+
     squareMap([1, 2, 3, 4, 5])
       //=> [1, 4, 9, 16, 25]
