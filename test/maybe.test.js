@@ -1,12 +1,11 @@
-import { expect, assert } from 'chai'
+import { expect } from 'chai'
 import maybe from '../src/maybe'
 
 const noop = () => {}
 
 describe('maybe', () => {
-
   it('should return a function', () => {
-    assert.isFunction(maybe(noop))
+    expect(maybe(noop)).to.be.instanceof(Function)
   })
 
   it('should be undefined when no parameters are passed to function', () => {
@@ -24,5 +23,4 @@ describe('maybe', () => {
     expect(maybe(trueIfFoo)('foo')).to.be.true
     expect(maybe(trueIfFoo)('bar')).to.be.false
   })
-
 })

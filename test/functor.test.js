@@ -2,7 +2,6 @@ import { expect } from 'chai'
 import functor from '../src/functor'
 
 describe('functor', function () {
-
   it('should upcast value to function', () => {
     const func = functor('foo')
     expect(func()).to.equal('foo')
@@ -12,5 +11,4 @@ describe('functor', function () {
     const func = functor(() => 'foo')
     expect(func()).to.equal('foo')
   })
-
 })

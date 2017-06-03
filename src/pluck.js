@@ -1,6 +1,4 @@
-var splat = require('./splat')
-  , property = require('./property')
+import splat from './splat'
+import property from './property'
 
-module.exports = function pluck(attr) {
-  return splat(property(attr))
-}
+export default attr => splat(property(attr))

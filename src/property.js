@@ -1,19 +1,13 @@
-import identity from 'lodash.identity'
+const identity = d => d
 
-module.exports = function property(k) {
-  var components
-
+export default k => {
   if (!k) return identity
 
-  components = k.split('.')
-
-  return function prop(d) {
-    return components.reduce(value, d)
-
-    function value(obj, k) {
-      if (obj == null) return undefined
-
-      return obj[k]
-    }
-  }
+  return d => k
+    .split('.')
+    .reduce((obj, k) => (
+      obj == null
+        ? undefined
+        : obj[k]
+    ), d)
 }
