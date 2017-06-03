@@ -1,10 +1,10 @@
 var chai = require('chai')
   , expect = chai.expect
   , assert = chai.assert
-  , negate = require('../negate')
+  , negate = require('../src/negate')
 
 describe('negate', function () {
-  
+
   it('should return a function', function () {
     assert.isFunction(negate(Function.prototype))
   })
@@ -17,7 +17,7 @@ describe('negate', function () {
 
   it('should filter falsy values', function () {
     var isFalsy = negate(Boolean)
-    
+
     expect([-2, -1, 0, 1, 2].filter(isFalsy)).to.have.members([0])
   })
 

@@ -1,11 +1,11 @@
 var chai = require('chai')
   , expect = chai.expect
-  , splat = require('../splat')
+  , splat = require('../src/splat')
 
 describe('splat', function () {
 
-  var squareMap = splat(function (n) { 
-    return n*n 
+  var squareMap = splat(function (n) {
+    return n*n
   })
 
   it('should return an instance of array', function () {

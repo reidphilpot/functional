@@ -10,7 +10,7 @@ If the specified value is a function, returns the specified value. Otherwise, re
 functor('value')()
 //=> 'value'
 
-functor(function() { return 'value' })()
+functor(() => 'value')()
 //=> 'value'
 ```
 

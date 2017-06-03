@@ -1,10 +1,10 @@
 var chai = require('chai')
   , expect = chai.expect
   , assert = chai.assert
-  , property = require('../property')
+  , property = require('../src/property')
 
 describe('property', function () {
-  
+
   it('should return a function', function () {
     assert.isFunction(property('foo'))
   })
@@ -33,7 +33,7 @@ describe('property', function () {
   it('should return passed object if not property requested', function () {
     var obj = { foo: 'bar' }
       , prop = property()
-      
+
     expect(prop(obj)).to.equal(obj)
   })
 

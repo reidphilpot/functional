@@ -1,19 +1,19 @@
-var _ = require('underscore')
+import identity from 'lodash.identity'
 
 module.exports = function property(k) {
   var components
 
-  if (!k) return _.identity
-  
+  if (!k) return identity
+
   components = k.split('.')
-  
-  return function prop(d) {  
+
+  return function prop(d) {
     return components.reduce(value, d)
 
     function value(obj, k) {
-      if (_.isUndefined(obj) || _.isNull(obj)) return undefined
-      
+      if (obj == null) return undefined
+
       return obj[k]
     }
   }
-} 
+}

@@ -1,7 +1,7 @@
 var chai = require('chai')
   , expect = chai.expect
   , assert = chai.assert
-  , partial = require('../partial')
+  , partial = require('../src/partial')
 
 describe('partial', function () {
 

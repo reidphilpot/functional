@@ -1,7 +1,7 @@
 var chai = require('chai')
   , expect = chai.expect
   , assert = chai.assert
-  , maybe = require('../maybe')
+  , maybe = require('../src/maybe')
   , noop = function() {}
 
 describe('maybe', function () {

@@ -1,18 +1,15 @@
-var chai = require('chai')
-  , expect = chai.expect
-  , functor = require('../functor')
+import { expect } from 'chai'
+import functor from '../src/functor'
 
 describe('functor', function () {
 
-  it('should upcast value to function', function () {
-    var func = functor('foo')
-
+  it('should upcast value to function', () => {
+    const func = functor('foo')
     expect(func()).to.equal('foo')
   })
 
-  it('should return function when passed one', function () {
-    var func = functor(function() { return 'foo' })
-
+  it('should return function when passed one', () => {
+    const func = functor(() => 'foo')
     expect(func()).to.equal('foo')
   })
 
