@@ -1,15 +1,9 @@
-module.exports = function maybe (fn) {
-  return function () {
-    var i
+export default fn => (...args) => {
+  let i
 
-    if (arguments.length === 0) {
-      return
-    }
-    else {
-      for (i = 0; i < arguments.length; ++i) {
-        if (arguments[i] == null) return arguments[i]
-      }
-      return fn.apply(this, arguments)
-    }
+  for (i = 0; i < args.length; ++i) {
+    if (args[i] == null) return args[i]
   }
+
+  return fn(...args)
 }
