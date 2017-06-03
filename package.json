@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "description": "Useful functional utils",
   "scripts": {
-    "test": "mocha -R spec test --compilers js:babel-core/register -watch",
+    "test": "mocha -R spec test --compilers js:babel-core/register",
     "patch-release": "npm version patch && npm publish && git push --follow-tags"
   },
   "repository": {
