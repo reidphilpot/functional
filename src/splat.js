@@ -1,5 +1,1 @@
-export default fn => {
-  return function (list) {
-    return Array.prototype.map.call(list, fn)
-  }
-}
+export default fn => arr => arr.map(fn)
