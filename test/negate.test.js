@@ -1,24 +1,20 @@
-var chai = require('chai')
-  , expect = chai.expect
-  , assert = chai.assert
-  , negate = require('../negate')
+import { expect } from 'chai'
+import negate from '../src/negate'
 
-describe('negate', function () {
-  
-  it('should return a function', function () {
-    assert.isFunction(negate(Function.prototype))
+const noop = () => {}
+
+describe('negate', () => {
+  it('should return a function', () => {
+    expect(negate(noop)).to.be.instanceof(Function)
   })
 
-  it('should negate result of passed function', function () {
-    var test = negate(function() { return true })
-
+  it('should negate result of passed function', () => {
+    const test = negate(() => true)
     expect(test()).to.be.false
   })
 
-  it('should filter falsy values', function () {
-    var isFalsy = negate(Boolean)
-    
+  it('should filter falsy values', () => {
+    const isFalsy = negate(Boolean)
     expect([-2, -1, 0, 1, 2].filter(isFalsy)).to.have.members([0])
   })
-
 })

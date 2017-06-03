@@ -1,40 +1,36 @@
-var chai = require('chai')
-  , expect = chai.expect
-  , assert = chai.assert
-  , property = require('../property')
+import { expect } from 'chai'
+import property from '../src/property'
 
-describe('property', function () {
-  
-  it('should return a function', function () {
-    assert.isFunction(property('foo'))
+describe('property', () => {
+  it('should return a function', () => {
+    expect(property('foo')).to.be.instanceof(Function)
   })
 
-  it('should return value of requested property', function () {
-    var obj = { foo: 'bar' }
-      , prop = property('foo')
+  it('should return value of requested property', () => {
+    const obj = { foo: 'bar' }
+    const prop = property('foo')
 
     expect(prop(obj)).to.equal('bar')
   })
 
-  it('should return deep value of requested property', function () {
-    var obj = { foo: { bar: 'bar' } }
-      , prop = property('foo.bar')
+  it('should return deep value of requested property', () => {
+    const obj = { foo: { bar: 'bar' } }
+    const prop = property('foo.bar')
 
     expect(prop(obj)).to.equal('bar')
   })
 
-  it('should return undefined if illegal property requested', function () {
-    var obj = { foo: 'bar' }
-      , prop = property('bar')
+  it('should return undefined if illegal property requested', () => {
+    const obj = { foo: 'bar' }
+    const prop = property('bar')
 
     expect(prop(obj)).to.be.undefined
   })
 
-  it('should return passed object if not property requested', function () {
-    var obj = { foo: 'bar' }
-      , prop = property()
-      
+  it('should return passed object if not property requested', () => {
+    const obj = { foo: 'bar' }
+    const prop = property()
+
     expect(prop(obj)).to.equal(obj)
   })
-
 })
