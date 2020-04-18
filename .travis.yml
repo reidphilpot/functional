@@ -1,17 +1,17 @@
 language: node_js
 
 node_js:
-  - 7
-  - 6
-  - 4
-  
+  - 12
+  - 10
+  - 8
+
 dist: trusty
 
 addons:
   sonarcloud:
-    organization: "reidphilpot-github"
+    organization: 'reidphilpot-github'
     token:
-      secure: "**************************" # encrypted value of your token
+      secure: '**************************' # encrypted value of your token
 
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
