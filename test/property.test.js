@@ -24,7 +24,7 @@ describe('property', () => {
     const obj = { foo: 'bar' }
     const prop = property('bar')
 
-    expect(prop(obj)).to.be.undefined
+    expect(prop(obj)).to.equal(undefined)
   })
 
   it('should return passed object if not property requested', () => {

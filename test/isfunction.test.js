@@ -3,17 +3,17 @@ import isFunction from '../src/isfunction'
 
 const noop = () => {}
 
-describe('isfunction', function () {
+describe('is function', function () {
   it('should return true if passed function', () => {
-    expect(isFunction(noop)).to.be.true
+    expect(isFunction(noop)).to.equal(true)
   })
 
   it('should false if not a function', () => {
-    expect(isFunction(1)).to.be.false
-    expect(isFunction({})).to.be.false
-    expect(isFunction(null)).to.be.false
-    expect(isFunction('foo')).to.be.false
-    expect(isFunction([])).to.be.false
-    expect(isFunction(false)).to.be.false
+    expect(isFunction(1)).to.equal(false)
+    expect(isFunction({})).to.equal(false)
+    expect(isFunction(null)).to.equal(false)
+    expect(isFunction('foo')).to.equal(false)
+    expect(isFunction([])).to.equal(false)
+    expect(isFunction(false)).to.equal(false)
   })
 })
