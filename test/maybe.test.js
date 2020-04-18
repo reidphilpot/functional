@@ -9,18 +9,18 @@ describe('maybe', () => {
   })
 
   it('should be undefined when no parameters are passed to function', () => {
-    expect(maybe(noop)()).to.be.undefined
+    expect(maybe(noop)()).to.equal(undefined)
   })
 
   it('should return argument if argument is undefined or null', () => {
-    expect(maybe(noop)(null)).to.be.null
-    expect(maybe(noop)(undefined)).to.be.undefined
+    expect(maybe(noop)(null)).to.equal(null)
+    expect(maybe(noop)(undefined)).to.equal(undefined)
   })
 
   it('should return true if passes truth test', () => {
-    const trueIfFoo = value => value === 'foo'
+    const trueIfFoo = (value) => value === 'foo'
 
-    expect(maybe(trueIfFoo)('foo')).to.be.true
-    expect(maybe(trueIfFoo)('bar')).to.be.false
+    expect(maybe(trueIfFoo)('foo')).to.equal(true)
+    expect(maybe(trueIfFoo)('bar')).to.equal(false)
   })
 })

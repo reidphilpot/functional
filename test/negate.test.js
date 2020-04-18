@@ -10,7 +10,7 @@ describe('negate', () => {
 
   it('should negate result of passed function', () => {
     const test = negate(() => true)
-    expect(test()).to.be.false
+    expect(test()).to.equal(false)
   })
 
   it('should filter falsy values', () => {

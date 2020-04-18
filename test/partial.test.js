@@ -4,7 +4,7 @@ import partial from '../src/partial'
 const noop = () => {}
 
 describe('partial', () => {
-  const subtract = (a, b) =>  b - a
+  const subtract = (a, b) => b - a
   const formal = (greeting, you, me) => `${greeting}, ${you}, my name is ${me}`
 
   it('should return a function', () => {
